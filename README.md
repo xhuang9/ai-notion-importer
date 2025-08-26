@@ -6,6 +6,13 @@ Transform natural language prompts and file uploads into structured Notion datab
 [![Nuxt 4](https://img.shields.io/badge/Nuxt-4.0-00DC82?style=flat&logo=nuxt.js&logoColor=white)](https://nuxt.com/)
 [![Vue 3](https://img.shields.io/badge/Vue.js-3.0-4FC08D?style=flat&logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![PWA Ready](https://img.shields.io/badge/PWA-Ready-brightgreen?style=flat&logo=pwa&logoColor=white)](#)
+
+## 🌐 Live Demo
+
+**[✨ Try AI Notion Importer](https://ai-notion-importer.netlify.app)** - Experience the full functionality with your own Notion database and OpenAI API keys.
+
+> 💡 **Note**: The demo requires your own API credentials for security. No data is stored - everything runs client-side except for API calls to OpenAI and Notion.
 
 ## ✨ What It Does
 
@@ -303,8 +310,3 @@ Built with amazing open-source technologies:
 - [OpenAI API](https://openai.com/) - GPT models for intelligent processing
 - [Notion API](https://developers.notion.com/) - Database integration
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
-
----
-
-**Ready to transform how you interact with Notion?** 🚀  
-[Get Started](#installation--setup) | [View Examples](#example-use-cases) | [Report Issues](https://github.com/yourusername/ai-notion-importer/issues)

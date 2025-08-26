@@ -12,6 +12,7 @@
   "dependencies": {
     "@notionhq/client": "^4.0.2",
     "@tailwindcss/vite": "^4.1.12",
+    "@vite-pwa/nuxt": "^1.0.4",
     "nuxt": "^4.0.3",
     "openai": "^4.104.0",
     "papaparse": "^5.5.3",

@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Maskable background - extends to full area -->
+  <rect width="512" height="512" fill="#000000"/>
+  
+  <!-- Safe area content (centered with padding) -->
+  <g transform="translate(102 102)">
+    <!-- Main AI Brain/Circuit Pattern -->
+    <!-- Central Node -->
+    <circle cx="154" cy="154" r="20" fill="#ffffff"/>
+    
+    <!-- Primary Connections -->
+    <line x1="154" y1="134" x2="154" y2="88" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="174" y1="154" x2="220" y2="154" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="154" y1="174" x2="154" y2="220" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="134" y1="154" x2="88" y2="154" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Diagonal Connections -->
+    <line x1="168" y1="140" x2="198" y2="110" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="168" y1="168" x2="198" y2="198" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="140" y1="168" x2="110" y2="198" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="140" y1="140" x2="110" y2="110" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Outer Nodes -->
+    <circle cx="154" cy="88" r="10" fill="#ffffff"/>
+    <circle cx="220" cy="154" r="10" fill="#ffffff"/>
+    <circle cx="154" cy="220" r="10" fill="#ffffff"/>
+    <circle cx="88" cy="154" r="10" fill="#ffffff"/>
+    
+    <!-- Corner Nodes -->
+    <circle cx="198" cy="110" r="6" fill="#ffffff"/>
+    <circle cx="198" cy="198" r="6" fill="#ffffff"/>
+    <circle cx="110" cy="198" r="6" fill="#ffffff"/>
+    <circle cx="110" cy="110" r="6" fill="#ffffff"/>
+    
+    <!-- Data Flow Indicators -->
+    <path d="M 180 154 L 188 150 L 188 158 Z" fill="#ffffff"/>
+    <path d="M 154 128 L 150 120 L 158 120 Z" fill="#ffffff"/>
+    <path d="M 128 154 L 120 158 L 120 150 Z" fill="#ffffff"/>
+    <path d="M 154 180 L 158 188 L 150 188 Z" fill="#ffffff"/>
+  </g>
+</svg>
