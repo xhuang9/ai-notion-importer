@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf .nuxt && rm -rf .output && nuxt build",
+    "dev": "rm -rf .nuxt && rm -rf .output && nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@notionhq/client": "^4.0.2",
+    "@tailwindcss/vite": "^4.1.12",
+    "nuxt": "^4.0.3",
+    "openai": "^4.104.0",
+    "papaparse": "^5.5.3",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.18.1",
+    "@types/papaparse": "^5.3.16"
+  }
+}
