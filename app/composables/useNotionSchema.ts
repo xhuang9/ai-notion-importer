@@ -12,7 +12,7 @@ export const useNotionSchema = () => {
     error.value = null
 
     try {
-      const response = await $fetch('/api/notion-schema')
+      const response = await $fetchWithSettings('/api/notion-schema')
       
       if (response.success) {
         schema.value = response.schema

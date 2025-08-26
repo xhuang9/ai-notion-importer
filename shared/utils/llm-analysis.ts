@@ -8,4 +8,4 @@ export const VALIDATION_PROMPT = `You are a data validator. Check the provided o
 
 export const OPERATION_EXPLANATION_PROMPT = `You are an operation explainer. Take the provided database operations and explain in plain language what actions will be performed and their expected outcomes.`;
 
-export const CONNECTION_TEST_MESSAGE = 'Respond with just "OK" to confirm the connection is working.';
+export const CONNECTION_TEST_MESSAGE = 'Respond with only the word "OK" (no other text) to confirm the connection is working.';

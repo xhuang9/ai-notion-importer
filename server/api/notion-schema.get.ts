@@ -1,24 +1,25 @@
 import { Client } from '@notionhq/client'
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
+  // Use merged configuration that includes localStorage settings
+  const actualConfig = getMergedConfig(event)
 
-  if (!config.notionApiKey || !config.notionDatabaseId) {
+  if (!actualConfig.NOTION_API_KEY || !actualConfig.NOTION_DATABASE_ID) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'Notion API configuration missing'
+      statusMessage: 'Notion API configuration missing. Please configure your Notion API key and database ID in Settings.'
     })
   }
 
-  // Initialize Notion client
+  // Initialize Notion client with merged config
   const notion = new Client({
-    auth: config.notionApiKey
+    auth: actualConfig.NOTION_API_KEY
   })
 
   try {
     // Get database schema
     const database = await notion.databases.retrieve({
-      database_id: config.notionDatabaseId
+      database_id: actualConfig.NOTION_DATABASE_ID
     })
 
     // Extract field information
@@ -66,7 +67,7 @@ export default defineEventHandler(async (event) => {
 
     // Get sample data to understand usage patterns
     const pagesResponse = await notion.databases.query({
-      database_id: config.notionDatabaseId,
+      database_id: actualConfig.NOTION_DATABASE_ID,
       page_size: 10 // Get first 10 pages for sampling
     })
 

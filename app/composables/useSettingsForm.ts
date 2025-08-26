@@ -122,7 +122,7 @@ export const useSettingsForm = () => {
     }
   }
 
-  // Connection testing
+  // Connection testing using current form state (not localStorage)
   const testConnection = async () => {
     isTestingConnection.value = true
     connectionTestResult.value = null
@@ -135,8 +135,24 @@ export const useSettingsForm = () => {
         LLM_MODEL: formData.value.LLM_MODEL || 'gpt-5-mini'
       }
       
-      const response = await $fetchWithSettings('/api/settings/test-connection', {
+      // Create temporary settings object that merges current form data with existing localStorage
+      const currentLocalStorageSettings = getLocalStorageSettings()
+      const temporarySettings = {
+        ...currentLocalStorageSettings,
+        // Override with current form values if they exist
+        ...(formData.value.OPENAI_API_KEY ? { OPENAI_API_KEY: formData.value.OPENAI_API_KEY } : {}),
+        ...(formData.value.NOTION_API_KEY ? { NOTION_API_KEY: formData.value.NOTION_API_KEY } : {}),
+        ...(formData.value.NOTION_DATABASE_ID ? { NOTION_DATABASE_ID: formData.value.NOTION_DATABASE_ID } : {}),
+        LLM_MODEL: formData.value.LLM_MODEL,
+        OPENAI_MAX_COMPLETION_TOKENS: formData.value.OPENAI_MAX_COMPLETION_TOKENS
+      }
+      
+      // Use direct $fetch with custom headers to bypass localStorage and use current form state
+      const response = await $fetch('/api/settings/test-connection', {
         method: 'POST',
+        headers: {
+          'x-localStorage-settings': JSON.stringify(temporarySettings)
+        },
         body: testData
       }) as any
       

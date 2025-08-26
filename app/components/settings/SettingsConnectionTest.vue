@@ -34,6 +34,20 @@
         <p :class="connectionTestResult.success ? 'text-green-700' : 'text-red-700'">
           {{ connectionTestResult.message }}
         </p>
+        
+        <!-- Show detailed results if available -->
+        <div v-if="connectionTestResult.results && connectionTestResult.results.length > 0" class="mt-2 space-y-1">
+          <div v-for="result in connectionTestResult.results" :key="result.service" class="text-xs">
+            <span class="font-medium">{{ result.service }}:</span>
+            <span :class="result.success ? 'text-green-600' : 'text-red-600'" class="ml-1">
+              {{ result.message }}
+            </span>
+          </div>
+        </div>
+        
+        <p class="text-xs mt-2 opacity-75" :class="connectionTestResult.success ? 'text-green-600' : 'text-red-600'">
+          Tested with current form values
+        </p>
       </div>
     </div>
   </div>

@@ -14,6 +14,7 @@
         @click="$emit('test-connection')"
         class="px-4 py-2 text-blue-700 border border-blue-300 rounded-md hover:bg-blue-50"
         :disabled="isTestingConnection"
+        title="Test connection with current form values (not saved yet)"
       >
         {{ isTestingConnection ? 'Testing...' : 'Test Connection' }}
       </button>
@@ -31,6 +32,7 @@
         type="submit"
         class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
         :disabled="hasValidationErrors"
+        title="Save current form values to localStorage"
       >
         Save Settings
       </button>

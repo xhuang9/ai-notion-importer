@@ -112,7 +112,6 @@ shared/                                # Auto-imported utilities & types (Nuxt 4
 server/                                # Backend API routes (Nuxt server)
 ├── api/
 │   ├── execute-plan.post.ts           # Plan execution endpoint
-│   ├── execute-plan-old.post.ts       # Legacy plan execution (backup)
 │   ├── generate-plan.post.ts          # Plan generation endpoint
 │   ├── notion-schema.get.ts           # Schema retrieval endpoint
 │   ├── update-operations.post.ts      # Operation update endpoint

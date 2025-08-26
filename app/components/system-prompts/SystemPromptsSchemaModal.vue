@@ -90,7 +90,7 @@
 interface Props {
   isVisible: boolean
   isLoadingSchema: boolean
-  schemaError: string
+  schemaError: string | null
   generatedPrompts: any[]
   selectedPrompts: number[]
   schemaSummary: any

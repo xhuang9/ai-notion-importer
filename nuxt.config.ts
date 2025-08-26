@@ -74,7 +74,7 @@ export default defineNuxtConfig({
       ]
     },
     devOptions: {
-      enabled: environment === "dev",
+      enabled: false, // Disable PWA in development to avoid service worker errors
       suppressWarnings: true,
       navigateFallbackAllowlist: [/^\/$/],
       type: 'module',

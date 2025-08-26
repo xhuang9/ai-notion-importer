@@ -65,7 +65,7 @@ export default defineEventHandler(async (event) => {
       content: CONNECTION_TEST_MESSAGE
     }]
 
-    await aiService.makeRequest(testMessages, { max_completion_tokens: 50 })
+    await aiService.makeRequest(testMessages, { max_completion_tokens: 200 })
     
     results.push({
       service: 'OpenAI',
