@@ -81,6 +81,6 @@ export default defineNuxtConfig({
     }
   },
   nitro: {
-    preset: environment === "production" ? "netlify_edge" : "node-server",
+    preset: environment === "production" ? "netlify" : "node-server",
   }
 })
